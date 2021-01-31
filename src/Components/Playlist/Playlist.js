@@ -19,9 +19,8 @@ class Playlist extends React.Component {
     }
   
     componentDidMount() {
-      const proxyurl = "https://cors-anywhere.herokuapp.com/";
       const url = "http://topmusicstreaming.com/api?country=fr";
-      fetch(proxyurl+url)
+      fetch(url)
         .then(res => res.json())
         .then(
           (result) => {
