@@ -1,13 +1,14 @@
 .item {
     height: 72px;
     display: grid;
-    grid-template-columns: 5% 5% 10% 65% 5% 5% 5%;
+    grid-template-columns: 10% 5% 10% 45% 10% 10% 10%;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas: "r1 r2 r3 r4 r5 r6 r7";
     background: #ffffff;
     margin-bottom: 12px;
     border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .r1 {
@@ -42,6 +43,7 @@
 .subitem {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .center {
@@ -54,13 +56,35 @@
 
 .text-item {
     text-align: center;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .position {
-    color: #5352ed;
-    font-size: 28px;
-    font-weight: bold;
+    color: #30336b;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.track{
+    color: #30336b;
+    font-weight: 600;
+    margin-right: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space:nowrap;
+    height: 72px;
+    vertical-align: middle;
+    line-height: 72px;
+}
+
+.artist{
+    color: #535c68;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space:nowrap;
+    height: 72px;
+    vertical-align: middle;
+    line-height: 72px;
 }
 
 .cover-item {
@@ -70,5 +94,88 @@
 
 .icon-item {
     height: 22px;
-    border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .item{
+        height: 62px;
+        grid-template-columns: 10% 5% 15% 40% 10% 10% 10%;
+    }
+
+    .column{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .position {
+        font-size: 22px;
+    }
+    
+    .text-item{
+        font-size: 22px;
+    }
+
+    .cover-item {
+        height: 48px;
+    }
+
+    .icon-item {
+        height: 18px;
+    }
+
+    .track{
+        height: 31px;
+        vertical-align: middle;
+        line-height: 31px;
+    }
+
+    .artist{
+        height: 31px;
+        vertical-align: middle;
+        line-height: 31px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .item{
+        height: 52px;
+        grid-template-columns: 10% 5% 15% 40% 10% 10% 10%;
+    }
+
+    .column{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .position {
+        font-size: 16px;
+    }
+    
+    .text-item{
+        font-size: 16px;
+    }
+
+    .cover-item {
+        height: 38px;
+    }
+
+    .icon-item {
+        height: 12px;
+    }
+
+
+    .track{
+        height: 26px;
+        vertical-align: middle;
+        line-height: 26px;
+    }
+
+    .artist{
+        height: 26px;
+        vertical-align: middle;
+        line-height: 26px;
+    }
+    
 }
