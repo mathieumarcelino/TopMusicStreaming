@@ -1,34 +1,44 @@
 // ----- IMPORT -----
-import React from 'react';
+import React, { useContext } from 'react';
 import './Footer.css';
-import moment from 'moment'
+
+import moment from 'moment';
+import 'moment-timezone';
 
 import linkedin from '../../Assets/Icons/linkedin.png' ;
 import github from '../../Assets/Icons/github.png' ;
 import twitter from '../../Assets/Icons/twitter.png' ;
 import instagram from '../../Assets/Icons/instagram.png' ;
+
+import { AppContext } from "../../Context/AppContext";
 // ------------------
 
 
-// var date = moment().utcOffset('+01:00').format('LT');
-// console.log(date);
-
-function lastUpdate(){
-    var now = moment().utcOffset('+01:00').format('h:mm:ss a');
-    var startTime = moment(now, "HH:mm:ss a");
-    var endTime = moment("04:00:00 pm", "HH:mm:ss a");
-    var duration = moment.duration(startTime.diff(endTime));
-    var hours = parseInt(duration.asHours());
-    var minutes = parseInt(duration.asMinutes())%60;
-
-    return hours + ' hours and '+ minutes+' minutes ago';
-}
-
 const Footer = () => {
+
+    const [context] = useContext(AppContext);
+
+    function lastUpdate(){
+        var startTime = moment.tz(moment(new Date()), 'Europe/Paris');
+        var endTime = moment(context.lastUpdateDate+' '+context.lastUpdateTime);
+        var duration = moment.duration(startTime.diff(endTime));
+        var hours = parseInt(duration.asHours());
+        var minutes = parseInt(duration.asMinutes())%60;
+        if (hours === 0){
+            return 'Last update : ' + minutes + ' minutes ago';
+        } else if (minutes === 0){
+            return 'Last update : ' + hours + ' hours ago';
+        } else if (context.lastUpdateDate === null || context.lastUpdateTime === null){
+            return '';
+        } else {
+            return 'Last update : ' + hours + ' hours and ' + minutes + ' minutes ago';
+        }
+    }
+
     return(
         <footer className="footer">
             <div className="f1 subfooter">
-                <span className="text-footer">Last update : {lastUpdate()}</span>
+                <span className="text-footer">{lastUpdate()}</span>
             </div>
             <div className="f2 subfooter">
                 <a className="text-footer" href="https://mathieumarcelino.fr">mathieumarcelino.fr</a>

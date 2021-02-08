@@ -1,13 +1,14 @@
 .header{
-    width: 100%;
-    height: 200px;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-family: 'Poppins', sans-serif;
 }
 
 .container-title{
+    margin: 52px 0;
     font-size: 28px;
     display: flex;
     align-items: center;
@@ -29,7 +30,11 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .header{
-        height: 180px;
+        width: 90%;
+    }
+
+    .container-title{
+        margin: 42px 0;
     }
 
     .title {
@@ -43,11 +48,15 @@
 
 @media screen and (max-width: 768px) {
     .header{
-        height: 100px;
+        width: 95%;
+    }
+
+    .container-title{
+        margin: 32px 0;
     }
 
     .title {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .subtitle{
