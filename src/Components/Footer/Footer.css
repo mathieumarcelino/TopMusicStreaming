@@ -50,6 +50,7 @@
     .footer{
         width: 90%;
         height: 80px;
+        margin-bottom: 22px;
     }
 
     .text-footer{
@@ -69,6 +70,7 @@
     .footer{
         width: 95%;
         height: 70px;
+        margin-bottom: 22px;
     }
 
     .text-footer{

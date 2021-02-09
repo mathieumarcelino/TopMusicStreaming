@@ -3,7 +3,6 @@ import React, { useContext } from 'react';
 import './Footer.css';
 
 import moment from 'moment';
-import 'moment-timezone';
 
 import linkedin from '../../Assets/Icons/linkedin.png' ;
 import github from '../../Assets/Icons/github.png' ;
@@ -19,7 +18,7 @@ const Footer = () => {
     const [context] = useContext(AppContext);
 
     function lastUpdate(){
-        var startTime = moment.tz(moment(new Date()), 'Europe/Paris');
+        var startTime = moment();
         var endTime = moment(context.lastUpdateDate+' '+context.lastUpdateTime);
         var duration = moment.duration(startTime.diff(endTime));
         var hours = parseInt(duration.asHours());
