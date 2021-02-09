@@ -1,6 +1,8 @@
+// ----- IMPORT -----
 import React , {useContext} from'react';
 import { AppContext } from '../../Context/AppContext';
 import './Menu.css';
+// ------------------
 
 const Menu = () => {
 
@@ -13,7 +15,7 @@ const Menu = () => {
     return (
         <div className="menu">
             <div className="item-menu">
-                <span className="text-menu">Choose a country :</span>
+                <span className="text-menu">Choose a location :</span>
                 <select className="select-menu" onChange={updateCountry}>
                     <option selected={context.country === "ww" ? "selected" : ""} value="ww">World</option>
                     <option selected={context.country === "us" ? "selected" : ""} value="us">United States</option>

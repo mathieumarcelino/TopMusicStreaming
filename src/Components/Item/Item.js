@@ -7,7 +7,6 @@ import down from '../../Assets/Icons/down.png';
 import same from '../../Assets/Icons/same.png';
 import firstime from '../../Assets/Icons/new.png' ;
 import album from '../../Assets/Icons/album.png' ;
-
 // ------------------
 
 function imgEvolution(e){

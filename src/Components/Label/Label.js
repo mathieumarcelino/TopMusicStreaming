@@ -1,12 +1,10 @@
 // ----- IMPORT -----
-
 import React from 'react';
 import './Label.css';
 
 import spotify from '../../Assets/Icons/spotify.png';
 import apple from '../../Assets/Icons/apple.png';
 import deezer from '../../Assets/Icons/deezer.png' ;
-
 // ------------------
 
 const Label = () => {

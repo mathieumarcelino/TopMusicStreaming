@@ -1,10 +1,13 @@
+// ----- IMPORT -----
 import React, { createContext, useState } from "react";
+// ------------------
+
 
 export const AppContext = createContext();
 
 export const AppProvider = (props) => {
     let currentCountry = 'ww'
-    let currentLocation = window.location.pathname.substr(1);
+    let currentLocation = window.location.pathname.replaceAll('/','');
     if(currentLocation !== '' && (currentLocation === 'ww' || currentLocation === 'us' || currentLocation === 'fr' || currentLocation === 'de' || currentLocation === 'es' || currentLocation === 'pt' || currentLocation === 'it')){
         currentCountry = currentLocation;
     }

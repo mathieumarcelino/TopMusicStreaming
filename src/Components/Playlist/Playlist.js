@@ -5,7 +5,6 @@ import Item from '../Item/Item';
 import Label from '../Label/Label';
 import loadingImg from '../../Assets/Icons/loading.gif';
 import { AppContext } from "../../Context/AppContext";
-
 // ------------------
 
 
