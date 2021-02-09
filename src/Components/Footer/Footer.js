@@ -18,20 +18,21 @@ const Footer = () => {
     const [context] = useContext(AppContext);
 
     function lastUpdate(){
-        var startTime = moment();
-        var endTime = moment(context.lastUpdateDate+' '+context.lastUpdateTime);
-        var duration = moment.duration(startTime.diff(endTime));
-        var hours = parseInt(duration.asHours());
-        var minutes = parseInt(duration.asMinutes())%60;
-        if (hours === 0){
-            return 'Last update : ' + minutes + ' minutes ago';
-        } else if (minutes === 0){
-            return 'Last update : ' + hours + ' hours ago';
-        } else if (context.lastUpdateDate === null || context.lastUpdateTime === null){
-            return '';
-        } else {
-            return 'Last update : ' + hours + ' hours and ' + minutes + ' minutes ago';
+        if(context.lastUpdateDate && context.lastUpdateTime){
+            var startTime = moment(new Date());
+            var endTime = moment(context.lastUpdateDate.replaceAll('-','/')+' '+context.lastUpdateTime, 'MM/DD/AAAA hh:mm');
+            var duration = moment.duration(startTime.diff(endTime));
+            var hours = parseInt(duration.asHours());
+            var minutes = parseInt(duration.asMinutes())%60;
+            if (hours === 0){
+                return 'Last update : ' + minutes + ' minutes ago';
+            } else if (minutes === 0){
+                return 'Last update : ' + hours + ' hours ago';
+            } else {
+                return 'Last update : ' + hours + ' hours and ' + minutes + ' minutes ago';
+            }
         }
+        return '';
     }
 
     return(
