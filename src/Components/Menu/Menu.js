@@ -4,30 +4,24 @@ import './Menu.css';
 
 const Menu = () => {
 
-    const [ , setContext] = useContext(AppContext);
+    const [context] = useContext(AppContext);
 
     const updateCountry = (event) => {
-        setContext({
-            country: event.target.value,
-            lastUpdateDate: null,
-            lastUpdateTime: null,
-            loading: true,
-            error: null,
-        })
+        window.location.replace(`/${event.target.value}`);
     }
 
     return (
         <div className="menu">
             <div className="item-menu">
-                <span className="text-menu">Choose country :</span>
+                <span className="text-menu">Choose a country :</span>
                 <select className="select-menu" onChange={updateCountry}>
-                    <option value="ww">World</option>
-                    <option value="us">United States</option>
-                    <option value="fr">France</option>
-                    <option value="de">Germany</option>
-                    <option value="es">Spain</option>
-                    <option value="pt">Portugal</option>
-                    <option value="it">Italy</option>
+                    <option selected={context.country === "ww" ? "selected" : ""} value="ww">World</option>
+                    <option selected={context.country === "us" ? "selected" : ""} value="us">United States</option>
+                    <option selected={context.country === "fr" ? "selected" : ""} value="fr">France</option>
+                    <option selected={context.country === "de" ? "selected" : ""} value="de">Germany</option>
+                    <option selected={context.country === "es" ? "selected" : ""} value="es">Spain</option>
+                    <option selected={context.country === "pt" ? "selected" : ""} value="pt">Portugal</option>
+                    <option selected={context.country === "it" ? "selected" : ""} value="it">Italy</option>
                 </select>
             </div>
         </div>

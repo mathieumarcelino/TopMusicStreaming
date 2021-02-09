@@ -3,8 +3,13 @@ import React, { createContext, useState } from "react";
 export const AppContext = createContext();
 
 export const AppProvider = (props) => {
+    let currentCountry = 'ww'
+    let currentLocation = window.location.pathname.substr(1);
+    if(currentLocation !== '' && (currentLocation === 'ww' || currentLocation === 'us' || currentLocation === 'fr' || currentLocation === 'de' || currentLocation === 'es' || currentLocation === 'pt' || currentLocation === 'it')){
+        currentCountry = currentLocation;
+    }
     const [data, setData] = useState({
-        country: "ww",
+        country: currentCountry,
         lastUpdateDate: null,
         lastUpdateTime: null,
         loading: true,
