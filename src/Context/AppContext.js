@@ -6,9 +6,9 @@ import React, { createContext, useState } from "react";
 export const AppContext = createContext();
 
 export const AppProvider = (props) => {
-    let currentCountry = 'ww'
-    let currentLocation = window.location.pathname.replaceAll('/','');
-    if(currentLocation !== '' && (currentLocation === 'ww' || currentLocation === 'us' || currentLocation === 'fr' || currentLocation === 'de' || currentLocation === 'es' || currentLocation === 'pt' || currentLocation === 'it')){
+    let currentCountry = 'us'
+    let currentLocation = window.location.pathname.split("/").join("");
+    if(currentLocation !== '' && (currentLocation === 'us' || currentLocation === 'fr' || currentLocation === 'de' || currentLocation === 'es' || currentLocation === 'pt' || currentLocation === 'it')){
         currentCountry = currentLocation;
     }
     const [data, setData] = useState({

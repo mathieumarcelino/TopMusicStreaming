@@ -20,7 +20,7 @@ const Footer = () => {
     function lastUpdate(){
         if(context.lastUpdateDate && context.lastUpdateTime){
             var startTime = moment(new Date());
-            var endTime = moment(context.lastUpdateDate.replaceAll('-','/')+' '+context.lastUpdateTime, 'MM/DD/AAAA hh:mm');
+            var endTime = moment(context.lastUpdateDate.split("-").join("/")+' '+context.lastUpdateTime, 'MM/DD/AAAA hh:mm');
             var duration = moment.duration(startTime.diff(endTime));
             var hours = parseInt(duration.asHours());
             var minutes = parseInt(duration.asMinutes())%60;

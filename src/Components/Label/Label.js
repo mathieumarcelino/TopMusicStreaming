@@ -2,7 +2,7 @@
 import React from 'react';
 import './Label.css';
 
-import spotify from '../../Assets/Icons/spotify.png';
+import youtube from '../../Assets/Icons/youtube.png';
 import apple from '../../Assets/Icons/apple.png';
 import deezer from '../../Assets/Icons/deezer.png' ;
 // ------------------
@@ -19,7 +19,7 @@ const Label = () => {
                 <span className="text-label">Track</span>
             </div>
             <div className="l4 sublabel center">
-                <img className="icon-label" src={spotify} alt="spotify icon"></img>
+                <img className="icon-label" src={youtube} alt="youtube icon"></img>
             </div>
             <div className="l5 sublabel center">
                 <img className="icon-label" src={apple} alt="apple music icon"></img>

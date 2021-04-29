@@ -17,7 +17,6 @@ const Menu = () => {
             <div className="item-menu">
                 <span className="text-menu">Choose a location :</span>
                 <select className="select-menu" onChange={updateCountry}>
-                    <option selected={context.country === "ww" ? "selected" : ""} value="ww">World</option>
                     <option selected={context.country === "us" ? "selected" : ""} value="us">United States</option>
                     <option selected={context.country === "fr" ? "selected" : ""} value="fr">France</option>
                     <option selected={context.country === "de" ? "selected" : ""} value="de">Germany</option>
