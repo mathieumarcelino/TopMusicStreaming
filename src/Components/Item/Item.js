@@ -21,14 +21,6 @@ function imgEvolution(e){
     }
 }
 
-function validImage(e){
-    if (e !== "") {
-        return e
-    } else {
-        return album
-    }
-}
-
 function ifMoreThan100 (e){
     if (e !== 0) {
         return e
@@ -48,7 +40,7 @@ const Item = ({position, evolution, track, artist, cover, plateform1, plateform2
                 <img className="icon-item" src={imgEvolution(evolution)} alt="cover"></img>
             </div>
             <div className="r3 subitem center">
-                <img className="cover-item" src={validImage(cover)} alt="cover"></img>
+                <img className="cover-item" src={album} alt="cover"></img>
             </div>
             <div className="r4 subitem column">
                 <span className="text-item track">{track}</span>
