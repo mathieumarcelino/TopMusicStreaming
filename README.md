@@ -1,4 +1,4 @@
-# BeerExplorer
+# TopMusicStreaming
 
 ## Link
 [topmusicstreaming.com](https://topmusicstreaming.com/)
