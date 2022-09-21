@@ -1,15 +1,22 @@
 // ----- IMPORT -----
-import React , {useContext} from'react';
+import React , { useContext } from 'react';
 import { AppContext } from '../../Context/AppContext';
 import './Menu.css';
 // ------------------
 
 const Menu = () => {
 
-    const [context] = useContext(AppContext);
+    const [context, setContext] = useContext(AppContext);
 
     const updateCountry = (event) => {
-        window.location.replace(`/${event.target.value}`);
+        window.history.replaceState(null, '', `/${event.target.value}`);
+        setContext({
+            country: event.target.value,
+            lastUpdateDate: null,
+            lastUpdateTime: null,
+            loading: true,
+            error: null,
+        });
     }
 
     return (

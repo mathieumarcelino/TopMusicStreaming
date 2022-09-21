@@ -41,7 +41,7 @@ const Footer = () => {
                 <span className="text-footer">{lastUpdate()}</span>
             </div>
             <div className="f2 subfooter">
-                <a className="text-footer" href="https://mathieumarcelino.fr">mathieumarcelino.fr</a>
+                <a className="text-footer" href="https://mathieumarcelino.com">mathieumarcelino.com</a>
             </div>
             <div className="f3 subfooter">
                 <div className="social">
