@@ -1,7 +1,7 @@
 # TopMusicStreaming
 
 ## Link
-[topmusicstreaming.com](https://topmusicstreaming.com/)
+[music.mathi3u.com](https://music.mathi3u.com)
 
 ## Demo
 ![](public/demo.gif)
