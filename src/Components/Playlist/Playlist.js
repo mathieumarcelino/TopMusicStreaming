@@ -17,7 +17,7 @@ const Playlist = () => {
   })
 
   useEffect(() => {
-    const url = `https://music.mathi3u.com/api?country=${context.country}`;
+    const url = `https://api.music.mathi3u.com/?country=${context.country}`;
     fetch(url)
       .then(res => res.json())
       .then(

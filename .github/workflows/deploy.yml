@@ -31,5 +31,5 @@ jobs:
           SERVER_USER: ${{ secrets.SERVER_USER }}
         run: |
           sudo apt-get install sshpass
-          sshpass -p $SERVER_PASSWORD scp -o StrictHostKeyChecking=no -r build/ $SERVER_USER@$SERVER_IP:/home/$SERVER_USER/topmusicstreaming/
+          sshpass -p $SERVER_PASSWORD scp -o StrictHostKeyChecking=no -r build/ $SERVER_USER@$SERVER_IP:/home/mathieu/topmusicstreaming/front
 
