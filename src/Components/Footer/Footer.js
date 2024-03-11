@@ -41,13 +41,13 @@ const Footer = () => {
                 <span className="text-footer">{lastUpdate()}</span>
             </div>
             <div className="f2 subfooter">
-                <a className="text-footer" href="https://mathieumarcelino.com">mathieumarcelino.com</a>
+                <a className="text-footer" href="https://mathi3u.com">mathi3u.com</a>
             </div>
             <div className="f3 subfooter">
                 <div className="social">
                     <a href="https://www.linkedin.com/in/mathieumarcelino/"><img className="socialicon" src={linkedin} alt="linkedin icon"></img></a>
                     <a href="https://github.com/mathieumarcelino"><img className="socialicon" src={github} alt="github icon"></img></a>
-                    <a href="https://twitter.com/mathieuenreel"><img className="socialicon" src={twitter} alt="twitter icon"></img></a>
+                    <a href="https://twitter.com/matreel"><img className="socialicon" src={twitter} alt="twitter icon"></img></a>
                     <a href="https://www.instagram.com/mathi3u/"><img className="socialicon" src={instagram} alt="instagram icon"></img></a>
                 </div>
             </div>
