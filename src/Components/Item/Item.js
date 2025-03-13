@@ -22,7 +22,7 @@ function imgEvolution(e) {
 }
 
 function ifMoreThan100(e) {
-    return e !== 0 ? e : "+100";
+    return e !== null ? e : "+100";
 }
 
 function getCoverImage(cover) {

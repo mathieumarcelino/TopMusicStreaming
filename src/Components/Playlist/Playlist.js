@@ -8,6 +8,11 @@ import { AppContext } from "../../Context/AppContext";
 // ------------------
 
 
+function getPositionByPlatform(positions, platform) {
+  const found = positions.find(position => position.platform === platform);
+  return found ? found.position : null;
+}
+
 const Playlist = () => {
 
   const [context, setContext] = useContext(AppContext);
@@ -54,7 +59,17 @@ const Playlist = () => {
       <section className="playlist">
         <Label/>
         {state.tracks.map((track, index) => (
-          <Item key={index} position={track.position} evolution={track.evolution} artist={track.artist} track={track.track} cover={track.cover} plateform1={track.positions.p1} plateform2={track.positions.p2} plateform3={track.positions.p3}/>
+        <Item
+          key={index}
+          position={track.position}
+          evolution={track.evolution}
+          artist={track.artist}
+          track={track.track}
+          cover={track.cover}
+          plateform1={getPositionByPlatform(track.positions, 'spotify')}
+          plateform2={getPositionByPlatform(track.positions, 'applemusic')}
+          plateform3={getPositionByPlatform(track.positions, 'deezer')}
+        />
         ))}
       </section>
     )
