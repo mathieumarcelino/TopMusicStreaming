@@ -8,7 +8,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 // ------------------
 
 function App() {
-  const validCountries = ['us', 'fr', 'de', 'es', 'pt', 'it'];
+  const validCountries = ['ww', 'us', 'fr', 'uk', 'jp', 'kr', 'tr', 'de', 'es', 'pt', 'it'];
   
   const MainContent = () => (
     <>

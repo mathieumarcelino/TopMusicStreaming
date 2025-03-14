@@ -6,9 +6,10 @@ import React, { createContext, useState } from "react";
 export const AppContext = createContext();
 
 export const AppProvider = (props) => {
-    let currentCountry = 'us'
+    const validCountries = ['ww', 'us', 'fr', 'uk', 'jp', 'kr', 'tr', 'de', 'es', 'pt', 'it'];
+    let currentCountry = 'ww'
     let currentLocation = window.location.pathname.split("/").join("");
-    if(currentLocation !== '' && (currentLocation === 'us' || currentLocation === 'fr' || currentLocation === 'de' || currentLocation === 'es' || currentLocation === 'pt' || currentLocation === 'it')){
+    if (currentLocation !== '' && validCountries.includes(currentLocation)){
         currentCountry = currentLocation;
     }
     const [data, setData] = useState({
