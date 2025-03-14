@@ -6,7 +6,6 @@ import moment from 'moment';
 
 import linkedin from '../../Assets/Icons/linkedin.png' ;
 import github from '../../Assets/Icons/github.png' ;
-import twitter from '../../Assets/Icons/twitter.png' ;
 import instagram from '../../Assets/Icons/instagram.png' ;
 
 import { AppContext } from "../../Context/AppContext";
@@ -47,7 +46,6 @@ const Footer = () => {
                 <div className="social">
                     <a href="https://www.linkedin.com/in/mathieumarcelino/"><img className="socialicon" src={linkedin} alt="linkedin icon"></img></a>
                     <a href="https://github.com/mathieumarcelino"><img className="socialicon" src={github} alt="github icon"></img></a>
-                    <a href="https://twitter.com/matreel"><img className="socialicon" src={twitter} alt="twitter icon"></img></a>
                     <a href="https://www.instagram.com/mathi3u/"><img className="socialicon" src={instagram} alt="instagram icon"></img></a>
                 </div>
             </div>

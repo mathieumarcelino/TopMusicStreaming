@@ -32,9 +32,8 @@
 }
 
 .social{
-    width: 140px;
     display: flex;
-    justify-content: space-between;
+    gap: 16px;
 }
 
 .socialicon{
@@ -58,7 +57,7 @@
     }
 
     .social{
-        width: 100px;
+        gap: 14px;
     }
 
     .socialicon{
@@ -78,7 +77,7 @@
     }
 
     .social{
-        width: 80px;
+        gap: 12px;
     }
 
     .socialicon{
